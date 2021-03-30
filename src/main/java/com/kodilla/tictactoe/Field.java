@@ -1,22 +1,15 @@
 package com.kodilla.tictactoe;
 
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 
-public class Field extends Node {
+public class Field extends Button {
 
-    Button button;
     int row;
     int col;
 
-    public Field(Button button, int col, int row) {
-        this.button = button;
+    public Field(int col, int row) {
         this.row = row;
         this.col = col;
-    }
-
-    public Button getButton() {
-        return button;
     }
 
     public int getRow() {
@@ -27,15 +20,11 @@ public class Field extends Node {
         return col;
     }
 
-    public void setButton(Button button) {
-        this.button = button;
-    }
-
-    public void setRow(int row) {
-        this.row = row;
-    }
-
-    public void setCol(int col) {
-        this.col = col;
+    @Override
+    public String toString() {
+        return "Field{" +
+                "row=" + row +
+                ", col=" + col +
+                '}';
     }
 }
